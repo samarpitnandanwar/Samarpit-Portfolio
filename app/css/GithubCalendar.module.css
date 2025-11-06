@@ -1,0 +1,71 @@
+/* styles/GithubCalendar.module.css */
+.githubCalendarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  margin: 20px 0;
+  width: 100%; /* Ensures full width */
+}
+
+.githubCalendarContainer h2 {
+  font-size: 2.5rem;
+  perspective: 1000px;
+  margin-bottom: 10px;
+}
+
+.githubCalendarContainer h2 span {
+  display: inline-block;
+  animation: rotate 5s infinite linear;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Responsive styles for different screen sizes */
+@media (max-width: 1200px) {
+  .githubCalendarContainer {
+    padding: 15px;
+  }
+  .githubCalendarContainer h2 {
+    font-size: 2rem; /* Slightly smaller font size for medium devices */
+  }
+}
+
+@media (max-width: 992px) {
+  .githubCalendarContainer {
+    padding: 10px;
+  }
+  .githubCalendarContainer h2 {
+    font-size: 1.75rem; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .githubCalendarContainer {
+    padding: 8px;
+  }
+  .githubCalendarContainer h2 {
+    font-size: 1.5rem; /* Smaller font size for smaller tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .githubCalendarContainer {
+    padding: 5px;
+  }
+  .githubCalendarContainer h2 {
+    font-size: 1.25rem; /* Smaller font size for mobile devices */
+  }
+}
